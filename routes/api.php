@@ -12,8 +12,8 @@ use App\Http\Controllers\Api\UnitApiController;
 use Illuminate\Support\Facades\Route;
 
 // Rutas públicas - accesibles sin autenticación
-//Route::post('login', [AuthApiController::class, 'login']);
-//Route::post('register', [AuthApiController::class, 'register'])->name('register');
+Route::post('login', [AuthApiController::class, 'login']);
+Route::post('register', [AuthApiController::class, 'register'])->name('register');
 
 // Ruta de verificación de usuario autenticado
 Route::middleware('auth:sanctum')->get('/user', fn(Request $request) => $request->user());
